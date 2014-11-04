@@ -1,4 +1,4 @@
-# Instruction for new Edison Board #
+# Instruction for a new Intel Edison Board #
 
 ### all this information was collected using the kind help of the people at the @HWHackathon in Dublin #HackDublin ###
 #### in specific: ####
