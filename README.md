@@ -12,11 +12,14 @@ Stephen Houston of Intel<br>
 
 First of all
 -----
-* read the getting started page 
-    + https://communities.intel.com/docs/DOC-23147
-* upgrade - flash using wired or wifi
-* configure_edison --setup
-* configure wifi
+1 read the getting started page 
+    + [Getting Started](https://communities.intel.com/docs/DOC-23147)
+2 upgrade - flash using wired or wifi
+    + [Mac Wired](https://communities.intel.com/docs/DOC-23193)
+    + [Windows Wired](https://communities.intel.com/docs/DOC-23192)
+    + [Linux Wired](https://communities.intel.com/docs/DOC-23200)
+3 configure_edison --setup
+4 configure wifi
 
 
 quick log fix
@@ -107,7 +110,7 @@ Mapping of GPIO in Yocto
 ------
 ### geniuses - http://www.emutexlabs.com/project ###
 #### GPIO mapping ####
-http://www.emutexlabs.com/project/215-intel-edison-gpio-pin-multiplexing-guide
+[Edison GPIO mapping to linux](http://www.emutexlabs.com/project/215-intel-edison-gpio-pin-multiplexing-guide)
 
 
 
