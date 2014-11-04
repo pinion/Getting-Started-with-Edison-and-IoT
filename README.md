@@ -39,13 +39,13 @@ add repositories for easier workflow
 
 #### add the following /etc/opkg/base-feeds.conf ####
 
-src all     http://iotdk.intel.com/repos/1.1/iotdk/all
-src x86 http://iotdk.intel.com/repos/1.1/iotdk/x86
-src i586    http://iotdk.intel.com/repos/1.1/iotdk/i586
-src/gz all http://repo.opkg.net/edison/repo/all
-src/gz edison http://repo.opkg.net/edison/repo/edison
-src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
-src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic
+src all     http://iotdk.intel.com/repos/1.1/iotdk/all<br>
+src x86 http://iotdk.intel.com/repos/1.1/iotdk/x86<br>
+src i586    http://iotdk.intel.com/repos/1.1/iotdk/i586<br>
+src/gz all http://repo.opkg.net/edison/repo/all<br>
+src/gz edison http://repo.opkg.net/edison/repo/edison<br>
+src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32<br>
+src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic<br>
 
 run `opkg update`
 
@@ -77,9 +77,9 @@ run `npm install -g ble-scanner`
 #### ** this d00d is brilliant!  ####
 [Sandeep Mistry Github page](https://github.com/sandeepmistry)
 
-`npm install -g async` - required by noble.js
-`npm install -g noble`
-`npm install -g bleno`
+`npm install -g async` - required by noble.js<br>
+`npm install -g noble`<br>
+`npm install -g bleno`<br>
 
 #### REST interface ####
 `npm install -g restify`
@@ -106,7 +106,7 @@ git clone https://github.com/node-red/node-red-nodes.git<br>
 
 #### remove what you do not need! ####
 ```
-npm install node-blink1 blinkstick node-hid heatmiser node-hue-api hidstream mqlight stomp-client wake_on_lan msgpack-js node-dweetio komponist nma growl node-prowl pushbullet pusher pushover-notifications snapchat twilio simple-xmpp aws-sdk level sqlite3 pg mysql suncalc node-stringprep firmata serialport sensortag wemo noble
+npm install node-blink1 blinkstick node-hid heatmiser node-hue-api hidstream mqlight stomp-client wake_on_lan msgpack-js node-dweetio komponist nma growl node-prowl pushbullet pusher pushover-notifications snapchat twilio simple-xmpp aws-sdk level sqlite3 pg mysql suncalc node-stringprep firmata serialport sensortag wemo noble<br>
 ```
 
 
@@ -127,10 +127,10 @@ hciconfig hci0 up<br>
 
 #### Bluetooth with Node ####
 ```
-npm install -g async - required by noble.js
-npm install noble - try: node advertisement-discovery.js
-npm install bleno - try: node test-ibeacon.js
-npm install sensortag – try: node test.js
+npm install -g async - required by noble.js<br>
+npm install noble - try: node advertisement-discovery.js<br>
+npm install bleno - try: node test-ibeacon.js<br>
+npm install sensortag – try: node test.js<br>
 ```
 
 
@@ -140,8 +140,8 @@ Start Coding > Intel DevKit
 #### The Intel Development Kit for IoT (IoTDK) is a complete solution to create and test applications for Intel IoT platforms like the Intel® Galileo and Edison maker boards – link (external)####
 <br>
 ```
-systemctl enable xdk-daemon
-systemctl restart xdk-daemon
+systemctl enable xdk-daemon<br>
+systemctl restart xdk-daemon<br>
 ```
 
 Good to know:
@@ -151,8 +151,8 @@ Good to know:
 
 #### unblock wifi / bluetooth ####
 ```
-rfkill unblock wifi
-rfkill unblock bluetooth
+rfkill unblock wifi<br>
+rfkill unblock bluetooth<br>
 ```
 #### lists all available packages ####
 `opkg list – list available package to be installed`
