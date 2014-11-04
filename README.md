@@ -1,5 +1,5 @@
-# Instruction for a new Intel Edison Board #
-
+Instruction for a new Intel Edison Board
+-----
 ### all this information was collected using the kind help of the people at the @HWHackathon in Dublin #HackDublin ###
 #### in specific: ####
 [Alex T](alextgalileo.altervista.org) of Intel <br>
@@ -11,7 +11,7 @@ Stephen Houston of Intel<br>
 <br>
 
 First of all
------
+=====
 1. read the getting started page 
     + [Getting Started](https://communities.intel.com/docs/DOC-23147)
 2. upgrade - flash using wired or wifi
@@ -23,7 +23,7 @@ First of all
 
 
 quick log fix
-------
+=====
 removes the need for repartioning of rootfs
 Logs can consume all rootfs space.
 
@@ -35,7 +35,7 @@ ln -s /home/var/log
 ```
 
 add repositories for easier workflow
-------
+=====
 
 #### add the following /etc/opkg/base-feeds.conf ####
 
@@ -49,58 +49,42 @@ src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic<br>
 
 run `opkg update`
 
-git
------
+Install git
+=====
 run `opkg install git`
 
-MRAA - hardware communication layer
------
+Install MRAA - hardware communication layer
+=====
 run `opkg install libmraa0`
 
 
-bluetooth
------
+Configure Bluetooth
+=====
 run `opkg install bluez5-dev`
 
-### start bluetooth ###
+#### Start Bluetooth ####
 ```
 rfkill unblock bluetooth
 hciconfig hci0 up
-bluetoothctl and hcitool to send commands
 ```
+use `bluetoothctl` and `hcitool` to send commands
 
-node.js specific settings
------
-### bluetooth related ###
+
+#### node.js related ####
 ```
 npm install -g ble-scanner
 npm install -g async
 npm install -g noble
 npm install -g bleno
 ```
-#### Start Bluetooth ####
-```
-rfkill unblock bluetooth
-hciconfig hci0 up
-```
-
-use `bluetoothctl` and `hcitool` to send commands
-
-#### Bluetooth with Node ####
-```
-npm install -g async - required by noble.js
-npm install noble - try: node advertisement-discovery.js
-npm install bleno - try: node test-ibeacon.js
-npm install sensortag – try: node test.js
-```
 
 REST interface
------
+=====
 `npm install -g restify`
 
 
 node-red
-----
+=====
 ```
 git clone https://github.com/node-red/node-red.git
 cd node-red
@@ -129,13 +113,13 @@ npm install node-blink1 blinkstick node-hid heatmiser node-hue-api hidstream mql
 
 
 Mapping of GPIO in Yocto
-------
+=====
 #### GPIO mapping ####
 [Edison GPIO mapping to linux](http://www.emutexlabs.com/project/215-intel-edison-gpio-pin-multiplexing-guide)
 
 
 Start Coding > Intel DevKit
------
+=====
 
 #### The Intel Development Kit for IoT (IoTDK) is a complete solution to create and test applications for Intel IoT platforms like the Intel® Galileo and Edison maker boards – link (external)####
 <br>
@@ -145,7 +129,7 @@ systemctl restart xdk-daemon
 ```
 
 Good to know:
------
+=====
 #### reconfigure edison ####
 `configure_edison --setup`
 
