@@ -77,19 +77,20 @@ run `npm install -g ble-scanner`
 #### ** this d00d is brilliant!  ####
 [Sandeep Mistry Github page](https://github.com/sandeepmistry)
 
-`npm install -g async` - required by noble.js<br>
-`npm install -g noble`<br>
-`npm install -g bleno`<br>
-
+```
+npm install -g async
+npm install -g noble
+npm install -g bleno
+```
 #### REST interface ####
 `npm install -g restify`
 
 node-red
 ----
 ```
-git clone https://github.com/node-red/node-red.git<br>
-cd node-red<br>
-npm install –production<br>
+git clone https://github.com/node-red/node-red.git
+cd node-red
+npm install –production
 ```
 
 ### node-red setup ###
@@ -99,9 +100,9 @@ npm install –production<br>
 
 #### additional nodes ####
 ```
-clone the repository directly from GitHub into the nodes/ directory:<br>
-cd node-red/nodes/<br>
-git clone https://github.com/node-red/node-red-nodes.git<br>
+clone the repository directly from GitHub into the nodes/ directory:
+cd node-red/nodes/
+git clone https://github.com/node-red/node-red-nodes.git
 ```
 
 #### remove what you do not need! ####
@@ -119,18 +120,18 @@ Mapping of GPIO in Yocto
 Start Bluetooth
 -----
 ```
-rfkill unblock bluetooth<br>
-hciconfig hci0 up<br>
+rfkill unblock bluetooth
+hciconfig hci0 up
 ```
 
 `bluetoothctl and hcitool to send commands`
 
 #### Bluetooth with Node ####
 ```
-npm install -g async - required by noble.js<br>
-npm install noble - try: node advertisement-discovery.js<br>
-npm install bleno - try: node test-ibeacon.js<br>
-npm install sensortag – try: node test.js<br>
+npm install -g async - required by noble.js
+npm install noble - try: node advertisement-discovery.js
+npm install bleno - try: node test-ibeacon.js
+npm install sensortag – try: node test.js
 ```
 
 
@@ -140,8 +141,8 @@ Start Coding > Intel DevKit
 #### The Intel Development Kit for IoT (IoTDK) is a complete solution to create and test applications for Intel IoT platforms like the Intel® Galileo and Edison maker boards – link (external)####
 <br>
 ```
-systemctl enable xdk-daemon<br>
-systemctl restart xdk-daemon<br>
+systemctl enable xdk-daemon
+systemctl restart xdk-daemon
 ```
 
 Good to know:
@@ -151,8 +152,8 @@ Good to know:
 
 #### unblock wifi / bluetooth ####
 ```
-rfkill unblock wifi<br>
-rfkill unblock bluetooth<br>
+rfkill unblock wifi
+rfkill unblock bluetooth
 ```
 #### lists all available packages ####
 `opkg list – list available package to be installed`
