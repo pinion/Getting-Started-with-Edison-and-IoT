@@ -72,18 +72,32 @@ bluetoothctl and hcitool to send commands
 node.js specific settings
 -----
 ### bluetooth related ###
-run `npm install -g ble-scanner`
-
-#### ** this d00d is brilliant!  ####
-[Sandeep Mistry Github page](https://github.com/sandeepmistry)
-
 ```
+npm install -g ble-scanner
 npm install -g async
 npm install -g noble
 npm install -g bleno
 ```
-#### REST interface ####
+#### Start Bluetooth ####
+```
+rfkill unblock bluetooth
+hciconfig hci0 up
+```
+
+use `bluetoothctl` and `hcitool` to send commands
+
+#### Bluetooth with Node ####
+```
+npm install -g async - required by noble.js
+npm install noble - try: node advertisement-discovery.js
+npm install bleno - try: node test-ibeacon.js
+npm install sensortag – try: node test.js
+```
+
+REST interface
+-----
 `npm install -g restify`
+
 
 node-red
 ----
@@ -118,24 +132,6 @@ Mapping of GPIO in Yocto
 ------
 #### GPIO mapping ####
 [Edison GPIO mapping to linux](http://www.emutexlabs.com/project/215-intel-edison-gpio-pin-multiplexing-guide)
-
-
-Start Bluetooth
------
-```
-rfkill unblock bluetooth
-hciconfig hci0 up
-```
-
-use `bluetoothctl` and `hcitool` to send commands
-
-#### Bluetooth with Node ####
-```
-npm install -g async - required by noble.js
-npm install noble - try: node advertisement-discovery.js
-npm install bleno - try: node test-ibeacon.js
-npm install sensortag – try: node test.js
-```
 
 
 Start Coding > Intel DevKit
