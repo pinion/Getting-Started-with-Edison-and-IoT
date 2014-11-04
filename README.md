@@ -85,11 +85,8 @@ node-red
 ```
 git clone https://github.com/node-red/node-red.git
 cd node-red
-npm install –production
+npm install
 ```
-
-
-
 
 `npm install -g mongodb js2xmlparser arduino-firmata fs.notify serialport feedparser redis`
 
