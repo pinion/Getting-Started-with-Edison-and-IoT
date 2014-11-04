@@ -10,6 +10,8 @@ Stephen Houston of Intel<br>
 
 <br>
 
+First of all
+-----
 * read the getting started page 
     + https://communities.intel.com/docs/DOC-23147
 * upgrade - flash using wired or wifi
