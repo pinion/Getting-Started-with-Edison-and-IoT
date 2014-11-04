@@ -81,15 +81,16 @@ npm install -g bleno
 
 node-red
 -----
+#### _non of this is needed. it depends on the use_ ####
 ```
 git clone https://github.com/node-red/node-red.git
 cd node-red
 npm install –production
 ```
 
-### node-red setup ###
 
-#### non of this is needed. it depends on the use ####
+
+
 `npm install -g mongodb js2xmlparser arduino-firmata fs.notify serialport feedparser redis`
 
 #### additional nodes ####
