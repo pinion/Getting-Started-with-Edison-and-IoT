@@ -57,6 +57,9 @@ Install MRAA - hardware communication layer
 -----
 run `opkg install libmraa0`
 
+Install libusb - for hid devices
+-----
+run `opkg install libusb-1.0-dev`
 
 Configure Bluetooth
 -----
