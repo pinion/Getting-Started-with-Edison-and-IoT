@@ -115,7 +115,7 @@ Mapping of GPIO in Yocto
 Start Coding > Intel DevKit
 -----
 
-#### The Intel Development Kit for IoT (IoTDK) is a complete solution to create and test applications for Intel IoT platforms like the Intel® Galileo and Edison maker boards – link (external)####
+#### The Intel Development Kit for IoT (IoTDK) is a complete solution to create and test applications for Intel IoT platforms like the Intel® Galileo and Edison maker boards <http://xdk.intel.com/>####
 <br>
 ```
 systemctl enable xdk-daemon
