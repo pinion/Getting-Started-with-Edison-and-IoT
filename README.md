@@ -106,8 +106,11 @@ git clone https://github.com/node-red/node-red-nodes.git
 ```
 
 #### remove what you do not need! ####
+
+node-blink1 blinkstick node-hid heatmiser node-hue-api hidstream mqlight stomp-client wake_on_lan msgpack-js node-dweetio komponist nma growl node-prowl pushbullet pusher pushover-notifications snapchat twilio simple-xmpp aws-sdk level sqlite3 pg mysql suncalc node-stringprep firmata serialport sensortag wemo noble
+
 ```
-npm install node-blink1 blinkstick node-hid heatmiser node-hue-api hidstream mqlight stomp-client wake_on_lan msgpack-js node-dweetio komponist nma growl node-prowl pushbullet pusher pushover-notifications snapchat twilio simple-xmpp aws-sdk level sqlite3 pg mysql suncalc node-stringprep firmata serialport sensortag wemo noble<br>
+npm install node-blink1 blinkstick node-hid heatmiser node-hue-api hidstream mqlight stomp-client wake_on_lan msgpack-js node-dweetio komponist nma growl node-prowl pushbullet pusher pushover-notifications snapchat twilio simple-xmpp aws-sdk level sqlite3 pg mysql suncalc node-stringprep firmata serialport sensortag wemo noble
 ```
 
 
@@ -124,7 +127,7 @@ rfkill unblock bluetooth
 hciconfig hci0 up
 ```
 
-`bluetoothctl and hcitool to send commands`
+use `bluetoothctl` and `hcitool` to send commands
 
 #### Bluetooth with Node ####
 ```
