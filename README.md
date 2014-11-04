@@ -64,8 +64,8 @@ run `opkg install bluez5-dev`
 
 ### start bluetooth ###
 ```
-rfkill unblock bluetooth<br>
-hciconfig hci0 up<br>
+rfkill unblock bluetooth
+hciconfig hci0 up
 bluetoothctl and hcitool to send commands
 ```
 
