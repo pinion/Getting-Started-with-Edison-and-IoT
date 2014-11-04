@@ -12,14 +12,14 @@ Stephen Houston of Intel<br>
 
 First of all
 -----
-1 read the getting started page 
+1. read the getting started page 
     + [Getting Started](https://communities.intel.com/docs/DOC-23147)
-2 upgrade - flash using wired or wifi
+2. upgrade - flash using wired or wifi
     + [Mac Wired](https://communities.intel.com/docs/DOC-23193)
     + [Windows Wired](https://communities.intel.com/docs/DOC-23192)
     + [Linux Wired](https://communities.intel.com/docs/DOC-23200)
-3 configure_edison --setup
-4 configure wifi
+3. run `configure_edison --setup` - general setup
+4. run `configure wifi` - if you need to set up wifi (step 3 should take care of that)
 
 
 quick log fix
@@ -27,10 +27,12 @@ quick log fix
 removes the need for repartioning of rootfs
 Logs can consume all rootfs space.
 
+```
 mkdir /home/var
 cd /var
 mv log /home/var
 ln -s /home/var/log
+```
 
 add repositories for easier workflow
 ------
@@ -45,88 +47,91 @@ src/gz edison http://repo.opkg.net/edison/repo/edison
 src/gz core2-32 http://repo.opkg.net/edison/repo/core2-32
 src mraa-upm http://iotdk.intel.com/repos/1.1/intelgalactic
 
-run:
-
-opkg update
+run `opkg update`
 
 git
 -----
-opkg install git
+run `opkg install git`
 
 MRAA - hardware communication layer
 -----
-opkg install libmraa0
+run `opkg install libmraa0`
 
 
 bluetooth
 -----
-opkg install bluez5-dev
+run `opkg install bluez5-dev`
 
 ### start bluetooth ###
-
+```
 rfkill unblock bluetooth<br>
 hciconfig hci0 up<br>
 bluetoothctl and hcitool to send commands
+```
 
 node.js specific settings
 -----
 ### bluetooth related ###
-npm install -g ble-scanner
+run `npm install -g ble-scanner`
 
 #### ** this d00d is brilliant!  ####
-https://github.com/sandeepmistry
+[Sandeep Mistry Github page](https://github.com/sandeepmistry)
 
-* npm install -g async - required by noble.js
-* npm install -g noble
-* npm install -g bleno
+`npm install -g async` - required by noble.js
+`npm install -g noble`
+`npm install -g bleno`
 
 #### REST interface ####
-* npm install -g restify
+`npm install -g restify`
 
 node-red
 ----
+```
 git clone https://github.com/node-red/node-red.git<br>
 cd node-red<br>
 npm install –production<br>
+```
 
 ### node-red setup ###
 
 #### non of this is needed. it depends on the use ####
-npm install -g mongodb js2xmlparser arduino-firmata fs.notify serialport feedparser redis<br>
+`npm install -g mongodb js2xmlparser arduino-firmata fs.notify serialport feedparser redis`
 
 #### additional nodes ####
+```
 clone the repository directly from GitHub into the nodes/ directory:<br>
 cd node-red/nodes/<br>
 git clone https://github.com/node-red/node-red-nodes.git<br>
-
+```
 
 #### remove what you do not need! ####
-
+```
 npm install node-blink1 blinkstick node-hid heatmiser node-hue-api hidstream mqlight stomp-client wake_on_lan msgpack-js node-dweetio komponist nma growl node-prowl pushbullet pusher pushover-notifications snapchat twilio simple-xmpp aws-sdk level sqlite3 pg mysql suncalc node-stringprep firmata serialport sensortag wemo noble
-
+```
 
 
 Mapping of GPIO in Yocto
 ------
-### geniuses - http://www.emutexlabs.com/project ###
 #### GPIO mapping ####
 [Edison GPIO mapping to linux](http://www.emutexlabs.com/project/215-intel-edison-gpio-pin-multiplexing-guide)
 
 
-
 Start Bluetooth
 -----
+```
 rfkill unblock bluetooth<br>
 hciconfig hci0 up<br>
+```
 
-bluetoothctl and hcitool to send commands<br>
+`bluetoothctl and hcitool to send commands`
 
 #### Bluetooth with Node ####
+```
 npm install -g async - required by noble.js
 npm install noble - try: node advertisement-discovery.js
 npm install bleno - try: node test-ibeacon.js
 npm install sensortag – try: node test.js
-
+```
 
 
 Start Coding > Intel DevKit
@@ -134,24 +139,26 @@ Start Coding > Intel DevKit
 
 #### The Intel Development Kit for IoT (IoTDK) is a complete solution to create and test applications for Intel IoT platforms like the Intel® Galileo and Edison maker boards – link (external)####
 <br>
-systemctl enable xdk-daemon<br>
-systemctl restart xdk-daemon<br>
-
+```
+systemctl enable xdk-daemon
+systemctl restart xdk-daemon
+```
 
 Good to know:
 -----
 #### reconfigure edison ####
-configure_edison --setup 
+`configure_edison --setup`
 
 #### unblock wifi / bluetooth ####
-rfkill unblock wifi<br>
-rfkill unblock bluetooth<br>
-
+```
+rfkill unblock wifi
+rfkill unblock bluetooth
+```
 #### lists all available packages ####
-opkg list – list available package to be installed<br>
+`opkg list – list available package to be installed`
 
 #### enable and start connman at boot:####
-systemctl enable connman && systemctl start connman 
+`systemctl enable connman && systemctl start connman`
 
 
 
